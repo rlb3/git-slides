@@ -44,7 +44,7 @@
 
 
 <div class="slide">
-<h1>Before we start</h1>
+<h1>Before We Start</h1>
 <ul>
 <li>Where to download git?</li>
 <ul>
@@ -57,10 +57,8 @@
     <pre>~/.gitconfig</pre>
   </li>
   <li>
-    <pre>
-      git config --global name "Your Name"
-      git config --global email user@cpanel.net
-    </pre>
+    git config --global name "Your Name" <br />
+    git config --global email user@cpanel.net
   </li>
 </ul>
 </ul>
@@ -70,6 +68,96 @@
 </div>
 
 
+<div class="slide">
+<h1>Cloning A Repository</h1>
+git clone git://github.com/rlb3/git-simple.git 'optional name here'
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Adding a change to the index</h1>
+echo "This library calls git commands and returns the output." >
+README <br /> <br />
+git diff <br /> <br />
+git add README <br />
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Diffing against the index</h1>
+git diff --cached or get diff --staged
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Reverting from the index</h1>
+git reset HEAD README
+<ul>
+  <li>Remove the filename to revert all newly add content to the index</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Commit a change</h1>
+git commit -m "Commit message"
+<ul>
+  <li>If you don't supply -m it will start $EDITOR and will finish the
+  commit when you quit</li>
+  <li>-v Will let you see the diff of the changed about to be committed</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Creating a branch</h1>
+git branch branch-name
+<ul>
+  <li>'git branch -a' to see all branches</li>
+  <li>'git branch -d|-D branch-name' to delete the branch</li>
+  <li>'git branch -m|-M branch-name' to rename the branch</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Merging a branch</h1>
+git merge branch-name
+<ul>
+  <li>--squash If you want all the commits from the branch to be merged in one commit</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Making a tag</h1>
+git tag tag-name
+<ul>
+  <li>-l see all tags</li>
+  <li>-d delete a tag. Do not do this if other people have pull the tag</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
 
 
 </div>
