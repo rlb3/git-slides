@@ -77,7 +77,7 @@ git clone git://github.com/rlb3/git-simple.git 'optional name here'
 </div>
 
 <div class="slide">
-<h1>Adding a change to the index</h1>
+<h1>Adding A Change To The Index</h1>
 echo "This library calls git commands and returns the output." >
 README <br /> <br />
 git diff <br /> <br />
@@ -88,7 +88,7 @@ git add README <br />
 </div>
 
 <div class="slide">
-<h1>Diffing against the index</h1>
+<h1>Diffing Against The Index</h1>
 git diff --cached or get diff --staged
 <div class="handout">
 [any material that should appear in print but not on the slide]
@@ -96,7 +96,7 @@ git diff --cached or get diff --staged
 </div>
 
 <div class="slide">
-<h1>Reverting from the index</h1>
+<h1>Reverting From The Index</h1>
 git reset HEAD README
 <ul>
   <li>Remove the filename to revert all newly add content to the index</li>
@@ -108,7 +108,7 @@ git reset HEAD README
 
 
 <div class="slide">
-<h1>Commit a change</h1>
+<h1>Commit A Change</h1>
 git commit -m "Commit message"
 <ul>
   <li>If you don't supply -m it will start $EDITOR and will finish the
@@ -122,7 +122,7 @@ git commit -m "Commit message"
 
 
 <div class="slide">
-<h1>Creating a branch</h1>
+<h1>Creating A Branch</h1>
 git branch branch-name
 <ul>
   <li>'git branch -a' to see all branches</li>
@@ -136,7 +136,7 @@ git branch branch-name
 
 
 <div class="slide">
-<h1>Merging a branch</h1>
+<h1>Merging A Branch</h1>
 git merge branch-name
 <ul>
   <li>--squash If you want all the commits from the branch to be merged in one commit</li>
@@ -148,7 +148,7 @@ git merge branch-name
 
 
 <div class="slide">
-<h1>Making a tag</h1>
+<h1>Making A Tag</h1>
 git tag tag-name
 <ul>
   <li>-l see all tags</li>
@@ -158,6 +158,91 @@ git tag tag-name
 [any material that should appear in print but not on the slide]
 </div>
 </div>
+
+<div class="slide">
+<h1>Setting Up A Remote Repository</h1>
+cd ..
+git clone --clone repo server <br />
+cd repo/ <br />
+git remote add server ../server <br />
+git remote update
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Pulling From A Repository</h1>
+git pull server
+<ul>
+  <li>--rebase Keeps your repository free of unnesseary merge commits</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Pushing Changes To The Remote Server</h1>
+git push server local-branch:remote-branch
+<ul>
+  <li>If the local and remote branches are the same only the one name is needed</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Deleting A Branch From A Server</h1>
+git push server :remote-branch
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Reviewing Previous Commits</h1>
+git show <br />
+git show ref-spec <br />
+git log <br />
+git log -p
+
+<ul>
+  <li>git log --decorate --graph --pretty=oneline  --abbrev-commit --all</li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Understanding rev-parse / Tree-ish</h1>
+HEAD~n | n commits behind HEAD <br />
+{yesterday}, {1 month 2 weeks 3 days 1 hour 1 second ago} or
+{1979-02-26 18:30:00} | Time based <br />
+branch@{n} | n commits behind branch <br />
+
+<ul>
+  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html">http://www.kernel.org/pub/software/scm/git/docs/git-rev-parse.html</a></li>
+</ul>
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
+<div class="slide">
+<h1>Ignoring files</h1>
+.gitignore
+.git/info/exclude
+<div class="handout">
+[any material that should appear in print but not on the slide]
+</div>
+</div>
+
 
 
 </div>
